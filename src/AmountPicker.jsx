@@ -5,8 +5,8 @@ export default function AmountPicker({ onAmountChange }) {
   const [isCustomSelected, setIsCustomSelected] = useState(false);
 
   return (
-    <fieldset className="" onChange={onAmountChange}>
-      <legend className="md:text-xl pb-2">Donation Amount</legend>
+    <fieldset className="pb-5 pt-4" onChange={onAmountChange}>
+      <legend className="md:text-xl pt-4">Donation Amount</legend>
       <div className="form-control">
         <label className="label">
           <input
