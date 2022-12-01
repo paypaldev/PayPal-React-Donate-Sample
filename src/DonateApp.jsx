@@ -3,6 +3,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import catPhoto from "./assets/cat1.png";
 
 function DonateForm() {
+  // ** State for the donation amount selected in the `AmountPicker` component  The amount is set onChange in the `AmountPicker` fieldset **
   const [amount, setAmount] = useState("5.00");
 
   return (
@@ -13,6 +14,7 @@ function DonateForm() {
         }}
       />
       <div className=" w-full">
+        {/* ** `currency` and `amount` get passed to the Donate button so that the selected amount is populated at checkout **  */}
         <DonateButton currency="USD" amount={amount} />
       </div>
     </form>
@@ -20,14 +22,16 @@ function DonateForm() {
 }
 
 function AmountPicker({ onAmountChange }) {
+  // ** state `isCustomSelected` and function `handleCustomNotSelected` for conditional rendering of the number input for custom donation amount **
   const [isCustomSelected, setIsCustomSelected] = useState(false);
 
   function handleCustomNotSelected() {
     setIsCustomSelected(false);
   }
+
   return (
-    <fieldset className="m-6" onChange={onAmountChange}>
-      <legend className="md:text-xl">Donation Amount</legend>
+    <fieldset className="" onChange={onAmountChange}>
+      <legend className="md:text-xl pb-2">Donation Amount</legend>
       <div className="form-control">
         <label className="label">
           <input
@@ -88,7 +92,7 @@ function AmountPicker({ onAmountChange }) {
               type="number"
               name="amount"
               id="customAmountNumberInput"
-              className="input input-sm md:input-md  input-bordered w-24"
+              className="input input-sm md:input-md input-bordered w-24"
               placeholder="25.00"
             />
           )}
@@ -99,6 +103,7 @@ function AmountPicker({ onAmountChange }) {
 }
 
 function DonateButton({ currency, amount }) {
+  // ** `amountRef` keeps track of the selected donation amount when a change is made in the `AmountPicker` component **
   const amountRef = useRef(amount);
 
   useEffect(() => {
@@ -175,7 +180,6 @@ function DonationCardText({ children }) {
           <img
             src={catPhoto}
             alt="A black cat looking straight into the camera. A cat tree in the background"
-            className="w-full"
           />
         </figure>
         <div className="card-body">
