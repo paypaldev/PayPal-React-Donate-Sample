@@ -68,7 +68,10 @@ Sample code to render donation buttons can be found in the [`react-paypal-js` Gi
 
 ## Usage
 
-![Donate to Kitty's house](src/assets/donation-form.png)
+<p align="center">
+<img src="src/assets/donation-form.png" alt="PayPal donation form" style=" width:50%; " />
+</p>
+
 In this example, we are building a donation form for Kitty's House, a fictional cat rescue organization. The form allows the donor to choose from three donation amounts or enter a custom donation amount.
 
 Once a donation button is clicked, the user will follow the standard checkout flow from the PayPal JavaScript SDK.
