@@ -18,8 +18,9 @@ export default function DonateButton({ amount }) {
 
   return (
     <PayPalButtons
-      style={{ color: "black", label: "donate" }}
-      fundingSource="paypal"
+      style={{ label: "donate" }}
+      // ** uncomment `fundingSource="paypal` to show only the PayPal Donate button **
+      // fundingSource="paypal"
       createOrder={(data, actions) => {
         return actions.order.create({
           purchase_units: [
