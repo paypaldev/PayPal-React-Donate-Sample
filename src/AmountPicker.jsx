@@ -5,9 +5,14 @@ export default function AmountPicker({ onAmountChange }) {
   const [isCustomSelected, setIsCustomSelected] = useState(false);
 
   return (
-    <fieldset className="pb-5 pt-4" onChange={onAmountChange}>
-      <legend className="md:text-xl pt-4">Donation Amount</legend>
+    <fieldset onChange={onAmountChange}>
+      <legend>Donation Amount</legend>
       <div className="form-control">
+        <p>
+          To donate to Kitty's House, choose a donation amount or enter a custom
+          amount and click the donate button. We appreciate your generosity and
+          thank you for your support!
+        </p>
         <label className="label">
           <input
             type="radio"

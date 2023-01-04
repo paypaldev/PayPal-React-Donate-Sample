@@ -10,3 +10,28 @@ label.label {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
+
+fieldset {
+  padding: 1.2rem;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 1.2rem 0;
+}
+fieldset > legend {
+  border-color: black;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  border-width: 1px;
+}
+.form-control > p {
+  margin: 0.5rem;
+}
+.form-control > label {
+  margin: 0 0.5rem;
+}
