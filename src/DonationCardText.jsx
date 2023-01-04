@@ -7,7 +7,7 @@ export default function DonationCardText({ children }) {
         <figure>
           <img
             src={catPhoto}
-            alt="A black cat looking straight into the camera. A cat tree in the background"
+            alt="A black cat looking straight into the camera. A cat tree is out of focus in the background"
           />
         </figure>
         <div className="card-body">
